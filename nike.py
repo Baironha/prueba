@@ -99,7 +99,9 @@ while True:
             print("2. Agregar producto")
             print("3. Eliminar producto")
             print("4. Motívate")
-            print("5. Salir")
+            print("5. Menu de usuarios")
+            print("6. Salir")
+            
             
             opcion = input("Ingrese el número de la opción: ")
 
@@ -120,7 +122,122 @@ while True:
                 if seguir.lower() != "si":
                     break
 
-            elif opcion == "5":
+            elif opcion == "5" :
+                print()
+
+                print("\n-----menu de usuarios-----")
+                print("a. usuarios")
+                print("b. mensaje de parte de los trabajadores")
+                print("c. calculadora")
+                print("d. salir")
+                print()
+
+                option_usu = str(input("Digite la letra de la opcion que desea selccionar: "))
+                usuarios=[
+                    {
+                        "nombre": "jackson",
+                        "peso": "75kg",
+                        "edad": "22"
+                    },
+                    {
+                        "nombre": "caled",
+                        "peso": "75kg",
+                        "edad": "21"
+                    }
+                ]
+                if option_usu == "a" :
+                    def mostrar_productos():
+                        print("\nLISTA DE USUARIOS:") #\n ayuda a dar un salto de linea
+                    for usu in usuarios:
+                        print(usuarios)
+                    print()
+
+                elif option_usu == "b":
+                    print("\n --mensaje--")
+                    print("ERES LO MAXIMO, TU PUEDES")
+
+                elif option_usu == "c":
+                    print("\n___calculadora___")
+                    print("1. sumar")
+                    print("2. restar")
+                    print("3. multiplicar")
+                    print("4. dividir")
+                    print("5. salir")
+
+                    seleccion =int(input("ingrese el numero de la opcion que desea utilizar: "))
+
+                    if seleccion == 1 :
+                        while True:
+                            num1 = float(input("Ingrese un numero a sumar: "))
+                            num2 = float(input("Ingrese un numero a sumar: "))
+
+                            def sumando(num1,num2):
+                                result= num1 + num2
+                                return result
+
+                            resultado = sumando(num1 , num2)
+                            print("resultado: ",resultado)
+
+                            salir =str(input("Digite x para salir y si para contimuar: "))
+                            if salir.lower() != "si":
+                                break
+                        
+                    elif seleccion == 2 :
+                        while True:
+                            res1 = int(input("Ingrese un numero a restar: "))
+                            res2 = int(input("Ingrese un numero a restar: "))
+
+                            def resta(res1, res2):
+                                restando = res1-res2
+                                return restando
+
+                            result_resta= resta(res1, res2)
+                            print("resultado: ",result_resta)
+                            salir =str(input("Digite x para salir y si para contimuar: "))
+                            if salir.lower() != "si":
+                                break
+
+                        
+
+                    elif seleccion == 3 :
+                        while True :
+                            digito1 = int(input("ingrese un numero a multiplicar: "))
+                            digito2 = int(input("Ingrese un numero a multiplicar: "))
+
+                            def multi(digito1, digito2):
+                                multiplicacion = digito1 * digito2
+                                return multiplicacion
+
+                            total =multi(digito1, digito2)
+                            print ("resultado: ",total)
+                            salir =str(input("Digite x para salir y si para contimuar: "))
+                            if salir.lower() != "si":
+                                break
+                            
+
+                    elif seleccion == 4 :
+                        while True:
+                            div1 = int(input("Ingrese un numero a dividir: "))
+                            div2 = int(input("Ingrese un numero a dividir: "))
+
+                            def divi(div1, div2):
+                                division= div1 / div2
+                                return division
+
+                            total_divi = divi(div1, div2)
+                            print("resultado",total_divi)
+                            salir =str(input("Digite x para salir y si para contimuar: "))
+                            if salir.lower() != "si":
+                                break
+                    elif seleccion == 5:
+                        break
+
+                elif option_usu == "d" :
+                    break
+                else :
+                    continue
+            
+            elif opcion == "6":
                 print("\nCERRANDO SESIÓN...")
                 break
 
@@ -131,3 +248,6 @@ while True:
 
     else:
         print("\n Usuario su nombre o contraseña son incorrectos.Por favor Intente nuevamente.")
+
+
+
